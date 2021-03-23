@@ -3,6 +3,7 @@
   --primary: #129fc0;
   --off-white: #f6f6f6;
   --sans: "Noto Sans JP", sans-serif;
+  --border-radius: 5px;
 }
 
 body {
@@ -39,4 +40,42 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 42px;
   margin-bottom: 42px;
+  background-color: var(--off-white);
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  width: 1200px;
+}
+
+.price-grid > .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: var(--off-white); */
+  background-color: white;
+  height: fit-content;
+  border-radius: var(--border-radius);
+}
+
+.price-grid > .item > .details {
+  text-align: center;
+  padding: 15px 15px 30px 15px;
+}
+
+.price-grid > .item > .details > .title {
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-size: 700;
+}
+
+.price-grid > .item > .banner img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
 }
