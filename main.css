@@ -161,7 +161,6 @@ body {
 .tooltip:after {
   content: "";
   position: absolute;
-
   left: 100%;
   margin-left: -5px;
   top: 50%;
@@ -177,4 +176,12 @@ body {
   margin-left: unset;
   margin-right: -5px;
   border-color: transparent transparent transparent black;
+}
+
+.pseudo-demo::before {
+  content: attr(data-tooltip);
+}
+
+.pseudo-demo::after {
+  content: "----";
 }
