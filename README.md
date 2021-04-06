@@ -14,5 +14,6 @@ After completing this workshop you will be able to:
 
 - [CSS Tooltip Tutorial](https://blog.logrocket.com/creating-beautiful-tooltips-with-only-css/)
 - [CSS Before and After Pseudo Selectors](https://www.youtube.com/watch?v=jXkK5QBg0zQ)
+- [UI/UX Best Practices for Mobile Tooltips](https://www.smashingmagazine.com/2021/02/designing-tooltips-mobile-user-interfaces/)
 
 > Made for the students of [Bottega University](http://bottega.edu/)
