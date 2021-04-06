@@ -123,29 +123,28 @@ body {
 }
 
 .tooltip:before {
-  content: attr(data-text); /* here's the magic */
+  content: attr(data-text);
   position: absolute;
-
-  /* vertically center */
   top: 50%;
   transform: translateY(-50%);
-
-  /* move to right */
   left: 100%;
-  margin-left: 15px; /* and add a small left margin */
-
-  /* basic styles */
+  margin-left: 15px;
   width: 200px;
   padding: 10px;
   border-radius: 10px;
   background: #000;
   color: #fff;
   text-align: center;
-
-  display: none; /* hide by default */
-
+  display: none;
   opacity: 0;
   transition: 0.3s opacity;
+}
+
+.tooltip-left:before {
+  left: unset;
+  right: 100%;
+  margin-right: 15px;
+  margin-left: unset;
 }
 
 .tooltip:hover:before,
@@ -165,13 +164,17 @@ body {
 
   left: 100%;
   margin-left: -5px;
-
-  /* vertically center */
   top: 50%;
   transform: translateY(-50%);
-
-  /* the arrow */
   border: 10px solid #000;
   border-color: transparent black transparent transparent;
   display: none;
+}
+
+.tooltip-left:after {
+  left: unset;
+  right: 100%;
+  margin-left: unset;
+  margin-right: -5px;
+  border-color: transparent transparent transparent black;
 }
