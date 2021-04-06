@@ -81,6 +81,30 @@ body {
   border-top-left-radius: var(--border-radius);
 }
 
+.price-grid > .item > .details > .feature-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.feature,
+.info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-icon > img {
+  width: 18px;
+  height: auto;
+  margin-left: 5px;
+}
+
+.price {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
 @media (max-width: 48em) {
   .content {
     grid-template-columns: 1fr;
@@ -96,4 +120,58 @@ body {
   .price-grid > .item {
     box-shadow: var(--shadow);
   }
+}
+
+.tooltip:before {
+  content: attr(data-text); /* here's the magic */
+  position: absolute;
+
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* move to right */
+  left: 100%;
+  margin-left: 15px; /* and add a small left margin */
+
+  /* basic styles */
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+
+  display: none; /* hide by default */
+
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+  display: block;
+  opacity: 1;
+}
+
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip:after {
+  content: "";
+  position: absolute;
+
+  left: 100%;
+  margin-left: -5px;
+
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* the arrow */
+  border: 10px solid #000;
+  border-color: transparent black transparent transparent;
+  display: none;
 }
